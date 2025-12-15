@@ -18,12 +18,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.udit.moviesapp.R.drawable
 
 @Composable
 fun Movie1(onMovie2 :() -> Unit, onMovie3 : () -> Unit)
@@ -33,7 +31,8 @@ fun Movie1(onMovie2 :() -> Unit, onMovie3 : () -> Unit)
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Image(painter = painterResource(id = R.drawable.star_on),
+        Image(
+            painter = painterResource(R.drawable.image1),
             contentDescription = "Demo Image",
             modifier = Modifier
                 .height(300.dp)
