@@ -32,7 +32,7 @@ fun Movie1(onMovie2 :() -> Unit, onMovie3 : () -> Unit)
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(R.drawable.image1),
+            painter = painterResource(R.drawable),
             contentDescription = "Demo Image",
             modifier = Modifier
                 .height(300.dp)
