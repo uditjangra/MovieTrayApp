@@ -15,6 +15,9 @@ fun NavHostRoute(navHostController: NavHostController){
             },
                 onMovie3 = {
                     navHostController.navigate("movie3")
+                },
+                onOpeningPage = {
+                    navHostController.navigate("Opening")
                 }
             )
         }
@@ -24,6 +27,9 @@ fun NavHostRoute(navHostController: NavHostController){
             },
                 onMovie3 = {
                     navHostController.navigate("movie3")
+                },
+                onOpeningPage = {
+                    navHostController.navigate("Opening")
                 }
             )
         }
@@ -32,7 +38,10 @@ fun NavHostRoute(navHostController: NavHostController){
                 navHostController.navigate("movie1")
             },
                 onMovie2 = {
-                    navHostController.navigate("movie3")
+                    navHostController.navigate("movie2")
+                },
+                onOpeningPage = {
+                    navHostController.navigate("Opening")
                 }
             )
         }
@@ -48,6 +57,5 @@ fun NavHostRoute(navHostController: NavHostController){
                 }
             )
         }
-
     }
 }

@@ -27,19 +27,19 @@ fun OpeningPage(onMovie1 :() -> Unit, onMovie2 : () -> Unit, onMovie3 :() -> Uni
             onClick = onMovie1,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 1")
+            Text("Kal Ho Na Ho")
         }
         Button(
             onClick = onMovie2,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 2")
+            Text("Shiddat")
         }
         Button(
             onClick = onMovie3,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 3")
+            Text("Jumanji")
         }
     }
 }

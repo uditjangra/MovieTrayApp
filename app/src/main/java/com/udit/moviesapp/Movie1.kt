@@ -1,11 +1,12 @@
 package com.udit.moviesapp
 
-import android.R
+import com.udit.moviesapp.R
 import android.graphics.drawable.Drawable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -24,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Movie1(onMovie2 :() -> Unit, onMovie3 : () -> Unit)
+fun Movie1(onMovie2 :() -> Unit, onMovie3 : () -> Unit, onOpeningPage : () -> Unit)
 {
     Column(modifier = Modifier.fillMaxSize()
         .background(Color.Red),
@@ -32,26 +33,34 @@ fun Movie1(onMovie2 :() -> Unit, onMovie3 : () -> Unit)
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(R.drawable),
+            painter = painterResource(R.drawable.image1),
             contentDescription = "Demo Image",
             modifier = Modifier
                 .height(300.dp)
                 .width(300.dp)
                 .padding(bottom = 20.dp)
         )
-        Text(text = "Movie 1", fontSize = 30.sp)
+        Text(text = "Kal ho na ho", fontSize = 30.sp)
 
         Button(
             onClick = onMovie2,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 2")
+            Text("Shiddat")
         }
         Button(
             onClick = onMovie3,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 3")
+            Text("Jumanji")
+        }
+    }
+    Row(modifier = Modifier.padding(top = 40.dp),
+        horizontalArrangement = Arrangement.Center,
+
+        ) {
+        Button(onClick = onOpeningPage) {
+            Text("Main Menu")
         }
     }
 }

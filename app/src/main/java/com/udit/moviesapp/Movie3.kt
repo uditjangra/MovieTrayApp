@@ -1,37 +1,60 @@
 package com.udit.moviesapp
-
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Movie3(onMovie1 :() -> Unit, onMovie2 : () -> Unit)
+fun Movie3(onMovie1 :() -> Unit, onMovie2 : () -> Unit,onOpeningPage : () -> Unit)
 {
     Column(modifier = Modifier.fillMaxSize()
         .background(Color.Blue),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Movie 3", fontSize = 30.sp)
+        Image(
+            painter = painterResource(R.drawable.jumanji),
+            contentDescription = "Demo Image",
+            modifier = Modifier
+                .height(300.dp)
+                .width(300.dp)
+                .padding(bottom = 20.dp)
+        )
+        Text(text = "Jumanji", fontSize = 30.sp)
         Button(
             onClick = onMovie1,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 1")
+            Text("Kal Ho Na Ho")
         }
         Button(
             onClick = onMovie2,
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
         ) {
-            Text("Movie 2")
+            Text("Shiddat")
         }
+    }
+    Row(modifier = Modifier.padding(top = 40.dp),
+        horizontalArrangement = Arrangement.Center,
+
+        ) {
+    Button(onClick = onOpeningPage) {
+        Text("Main Menu")
+    }
     }
 }
